@@ -12,6 +12,9 @@ let timerId = null;
 
 buttonStart.addEventListener("click", () => {timerId = setInterval(() => {
     body.style.backgroundColor = getRandomHexColor()
-  }, 1000);})
+  }, 1000);
+  buttonStart.disabled = true;
+})
 
-buttonStop.addEventListener("click", () => { clearInterval(timerId);})
+buttonStop.addEventListener("click", () => { clearInterval(timerId);
+buttonStart.disabled = false;})
