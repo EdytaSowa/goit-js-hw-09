@@ -63,7 +63,7 @@ function convertMs(ms) {
 //   }
 
 startBtn.addEventListener('click', () => {
-  const timerID = setInterval(() => {
+  let timerID = setInterval(() => {
     startBtn.disabled = true;
 
     const numberInMs = new Date(pickedDate.value) - new Date();
@@ -76,7 +76,6 @@ startBtn.addEventListener('click', () => {
     };
 
     days.textContent = addLeadingZero(convertTime.days);
-    // days.textContent = convertTime.days.toString().padStart(2,'0');
     hours.textContent = addLeadingZero(convertTime.hours);
     minutes.textContent = addLeadingZero(convertTime.minutes);
     seconds.textContent = addLeadingZero(convertTime.seconds);
