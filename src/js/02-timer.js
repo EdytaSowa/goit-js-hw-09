@@ -63,7 +63,7 @@ function convertMs(ms) {
 //   }
 
 startBtn.addEventListener('click', () => {
-  timerID = setInterval(() => {
+  const timerID = setInterval(() => {
     startBtn.disabled = true;
 
     const numberInMs = new Date(pickedDate.value) - new Date();
